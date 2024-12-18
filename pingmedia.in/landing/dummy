@@ -1,0 +1,96 @@
+<img id="bee" width="150" height="150" />
+
+      <svg id="scroll-path-svg" xmlns="http://www.w3.org/2000/svg" width="8643.492" height="31264.535"
+        viewBox="0 0 8643.492 31264.535">
+        <path id="scrollPath" data-name="Path 2251"
+          d="M10510.612,12551.7H8610.162C7809.551,12551.7,7629.729,12589.400000000001,7629.729,12285.819000000001V9853.272C7629.729,9452.194000000001,7305.8460000000005,9507.251,6630.919,9145.194000000001S6023.446,8435.232,5710.733,8148S4731.965,7723.758,4731.965,7019.711S5298.765,6447.733,5573.737,6557.566000000001S5931.463,6709.024,6434.481,6709.024H7357.629C7577.487,6709.024,7631.286,6639.717000000001,7631.286,6466.653C7631.286,5951.041,7630.991,2679.1400000000003,7630.991,2263.9620000000004C7630.991,1778.6620000000005,5710.733,3168.693,5710.733,2688.6280000000006C5710.733,2189.7280000000005,5707.917,-117.27699999999959,5707.917,-594.1109999999994L5710.733,-2360.0989999999993C5710.733,-2555.0989999999993,5552.652,-2713.180999999999,5357.651,-2713.180999999999H5182.872C4987.872,-2713.180999999999,4829.79,-2555.100999999999,4829.79,-2360.0989999999993S4987.87,-2007.0169999999994,5182.872,-2007.0169999999994H7037.619C7232.619,-2007.0169999999994,7390.701999999999,-2165.0969999999993,7390.701999999999,-2360.0989999999993S7232.620999999999,-2713.180999999999,7037.619999999999,-2713.180999999999L5972.774999999999,-2701.3669999999993C5800.218999999999,-2701.3669999999993,5710.990999999999,-2814.9119999999994,5710.990999999999,-2950.814999999999V-10750.98C5710.990999999999,-11452.015,5728.042999999999,-11719.35,5728.042999999999,-12060.117C5728.042999999999,-12146.801,5660.600999999999,-12210.753,5577.406999999998,-12210.753C5308.049999999998,-12211.445,4725.306999999998,-12212.704,4239.059999999999,-12212.704C3445.1139999999987,-12212.704,3308.3419999999987,-12362.569,2843.516999999999,-12389.779999999999S1872.1169999999988,-12540.48,1872.1169999999988,-13233.634999999998V-18706.35"
+          transform="translate(-1867.12 18706.35)" fill="none" stroke="#ff007a" stroke-miterlimit="10"
+          stroke-width="10" />
+      </svg>
+
+      CSS
+
+      #scroll-path-svg {
+        position: absolute;
+        top: 0;
+        left: 50vw;
+        pointer-events: none;
+        width: 320.1293rem;
+        height: 1157.9457rem;
+        z-index: -1;
+        opacity: 0;
+    }
+
+
+    .show-path #scroll-path-svg {
+        z-index: 5;
+        opacity: 1;
+    }
+
+
+    #scroll-path-svg {
+        display: none;
+    }
+
+    #bee {
+        position: absolute;
+        top: 0;
+        left: 0;
+        filter: drop-shadow(8px 8px 6px rgba(0, 0, 0, 0.75));
+        will-change: transform;
+        z-index: -1;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .show-path #bee {
+        z-index: 4;
+        opacity: 1;
+    }
+    
+
+    #bee {
+        display: none;
+    }
+
+    JS
+
+    initScrollTween: function () {
+        self.desktop.viewport = document.querySelector("#viewport");
+        self.desktop.world = document.querySelector("#world");
+        self.desktop.bee = document.querySelector("#bee");
+        gsap.set(self.desktop.bee, { xPercent: -50, yPercent: -50 });
+        self.desktop.setX = gsap.quickSetter(self.desktop.world, "x", "px");
+        self.desktop.setY = gsap.quickSetter(self.desktop.world, "y", "px");
+        self.desktop.setOrigin = gsap.quickSetter(self.desktop.world, "transformOrigin");
+        self.desktop.beeProps = gsap.getProperty(self.desktop.bee);
+    },
+
+},
+createScrollTween: function () {
+    var scrollTweenObject = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#viewport",
+            pin: "#viewport",
+            start: "top top",
+            id: "scene",
+            markers: true,
+            scrub: !0,
+            end: function () {
+                return "+=" + self.desktop.worldHeight;
+            },
+        },
+    });
+    scrollTweenObject.to(self.desktop.bee, {
+        motionPath: { path: "#scrollPath", align: "#scrollPath", autoRotate: !0, start: 1, end: 0 },
+        ease: "linear",
+        onUpdate: function () {
+            const x = self.desktop.beeProps("x");
+            const y = self.desktop.beeProps("y");
+            self.desktop.setOrigin(x + "px " + y + "px");
+            self.desktop.setX(-self.desktop.clampX(x - self.desktop.vw / 2));
+            self.desktop.setY(-self.desktop.clampY(y - self.desktop.vh / 2));
+        },
+    });
+    return scrollTweenObject;
+},
