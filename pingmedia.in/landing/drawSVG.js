@@ -591,7 +591,7 @@ function Grow() {
                 screen4.cleanUpObjects.push(kpiText);
             }
             screen4.fromTo("#mline4_4", { drawSVG: "0%" }, { drawSVG: "100%", duration: 50 });
-            var kpiTwo = document.querySelector(".screen4__kpi--two");
+            var kpiTwo = document.querySelector(".screen4__kpi--two");  
             if (kpiTwo) {
                 var kpiStrokePaths = kpiTwo.querySelectorAll(".screen4__kpi__icon path");
                 var fillPaths = kpiTwo.querySelectorAll(".screen4__kpi__icon path.fill_path");
