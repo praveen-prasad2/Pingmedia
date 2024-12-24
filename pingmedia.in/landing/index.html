@@ -54,11 +54,10 @@
               </div>
 
               <h1 class="screen1__title screen-text">
-                FUEL YOUR DIGITAL FUTURE<span>LET YOUR BRAND FLY HIGHER.</span><br />
+                FUEL YOUR DIGITAL FUTURE<span>LET YOUR BRAND FLY HIGHER.</span
+                ><br />
               </h1>
-              <div class="screen1__subtitle screen-text">
-                MEDIA AGENCY
-              </div>
+              <div class="screen1__subtitle screen-text">MEDIA AGENCY</div>
 
               <svg
                 class="screen1__line-1 screen-line-desktop"
@@ -80,27 +79,23 @@
                 />
               </svg>
 
-         
               <svg
-              class="screen1__line-2 screen-line-desktop"
-              data-animation-direction="top-to-bottom"
-              width="540"
-              height="400"
-              viewBox="-20 0 540 400"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                id="line1_2"
-                data-name="Path 289"
-                d="M423.5 4H459C481.644 4 500 22.3563 500 45V176.5C500 199.144 481.644 217.5 459 217.5H45C22.3563 217.5 4 199.144 4 176.5V171.5C4 148.856 22.3563 130.5 45 130.5H375.5C398.144 130.5 416.5 148.856 416.5 171.5V410"
-                stroke="#EF7F1A"
-                stroke-width="14  "
-              />
-            </svg>
-            
-            
-
+                class="screen1__line-2 screen-line-desktop"
+                data-animation-direction="top-to-bottom"
+                width="540"
+                height="400"
+                viewBox="-20 0 540 400"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  id="line1_2"
+                  data-name="Path 289"
+                  d="M423.5 4H459C481.644 4 500 22.3563 500 45V176.5C500 199.144 481.644 217.5 459 217.5H45C22.3563 217.5 4 199.144 4 176.5V171.5C4 148.856 22.3563 130.5 45 130.5H375.5C398.144 130.5 416.5 148.856 416.5 171.5V410"
+                  stroke="#EF7F1A"
+                  stroke-width="14  "
+                />
+              </svg>
 
               <!-- ############## -->
 
@@ -130,7 +125,6 @@
                 transform="translate(-600.249)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="20" />
             </svg> -->
 
-           
               <svg
                 class="screen1__mobile-line-2 screen-line-mobile"
                 xmlns="http://www.w3.org/2000/svg"
@@ -175,7 +169,16 @@
           <!-- SCREEN 2 -->
           <div class="screen2">
             <div class="screen2__bg"></div>
+
             <div class="screen2__content">
+              <div class="vision__bg">
+                <img
+                  src="../Images/vision.png"
+                  alt="vision"
+                  class="vision-background"
+                />
+              </div>
+<!-- 
               <svg
                 class="screen2__line-1 screen-line-desktop"
                 xmlns="http://www.w3.org/2000/svg"
@@ -193,7 +196,27 @@
                   stroke-miterlimit="10"
                   stroke-width="20"
                 />
-              </svg>
+              </svg> -->
+
+              <svg
+  class="screen2__line-1 screen-line-desktop"
+  width="440"
+  height="260"
+  viewBox="-40 -40 400 274"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M332 -85V169.148C332 191.71 313.71 210 291.148 210H-40"
+    stroke="#fff"
+    id="line2_1"
+    stroke-miterlimit="10"
+    data-name="Path 915"
+    stroke-width="26"
+  />
+</svg>
+
+            
 
               <svg
                 class="screen2__mobile-line-1 screen-line-mobile"
@@ -6596,6 +6619,61 @@
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/11.0.3/lazyload.min.js"
     ></script>
+
+    <!-- Bootstrap -->
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script>
+      const words = ["Design", "Marketing", "Branding"];
+      let index = 0;
+
+      function changeWord() {
+        const element = document.getElementById("animated-words");
+        element.textContent = words[index];
+        index = (index + 1) % words.length; // Loop back to the first word
+      }
+
+      setInterval(changeWord, 2000);
+    </script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="assets/slick/slick.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#services").slick({
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          arrows: false,
+          dots: false,
+          pauseOnHover: true,
+          infinite: true,
+          responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        });
+      });
+    </script>
   </body>
 
   <!-- Mirrored from pingmedia.in/landing/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Dec 2024 07:19:58 GMT -->

@@ -879,7 +879,7 @@ textarea.contact-popup__field__input {
 
 .screen2 {
     position: relative;
-    background: #e8e8e8;
+    background: #fff;
     color: #000;
     width: 100vw;
 }
@@ -890,7 +890,7 @@ textarea.contact-popup__field__input {
     left: 0;
     width: 200vw;
     height: 100%;
-    background: #e8e8e8;
+    background: #fff;
 }
 
 .screen2__content {
@@ -899,6 +899,16 @@ textarea.contact-popup__field__input {
     padding-bottom: 220.7812%;
     position: relative;
     overflow: hidden;
+}
+
+.vision__bg {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.vision-background{
+    width: 50rem;
 }
 
 .screen2__title {
@@ -924,7 +934,7 @@ textarea.contact-popup__field__input {
 .screen2__line-1 {
     position: absolute;
     top: 0;
-    left: 48.7777rem;
+    left: 45.2777rem;
     width: 10.5925rem;
     height: 9.6662rem;
 }
