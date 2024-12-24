@@ -782,7 +782,7 @@ textarea.contact-popup__field__input {
 
 .screen1 {
     position: relative;
-    background: #EF7F1A;
+    background: #fff;
     color: #000;
     width: 100vw;
 }
@@ -796,8 +796,8 @@ textarea.contact-popup__field__input {
 
 .screen1__logo {
     position: absolute;
-    top: 25.1851rem;
-    left: 0;
+    top: 14.1851rem;
+    left: 5.181rem;
     width: 16.4444rem;
 }
 
@@ -809,8 +809,8 @@ textarea.contact-popup__field__input {
 
 .screen1__line-1 {
     position: absolute;
-    top: 14.4444rem;
-    left: 16.037rem;
+    top: 16.020rem;
+    left: 8.037rem;
     width: 25.1111rem;
     height: 11.4814rem;
 }
