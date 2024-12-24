@@ -798,7 +798,7 @@ textarea.contact-popup__field__input {
     position: absolute;
     top: 14.1851rem;
     left: 5.181rem;
-    width: 16.4444rem;
+    width: 20.4444rem;
 }
 
 .screen1__logo img {
@@ -809,19 +809,19 @@ textarea.contact-popup__field__input {
 
 .screen1__line-1 {
     position: absolute;
-    top: 16.020rem;
-    left: 8.037rem;
+    top: 16.820rem;
+    left: 9.037rem;
     width: 25.1111rem;
     height: 11.4814rem;
 }
 
 .screen1__title {
     position: absolute;
-    top: 13.3333rem;
-    left: 37.4074rem;
-    width: 23.1481rem;
+    top: 24.3333rem;
+    left: 28.6074rem;
+    width:25.1481rem;
     margin: 0 0;
-    font-size: 2.7407rem;
+    font-size: 1.7407rem;
     line-height: 0.9638;
     letter-spacing: 0;
     font-weight: 700;
@@ -830,7 +830,7 @@ textarea.contact-popup__field__input {
 
 .screen1__title span {
     display: inline-block;
-    background: #EF7F1A;
+    font-size: 1.1407rem;
     position: relative;
 }
 
@@ -840,7 +840,7 @@ textarea.contact-popup__field__input {
     position: absolute;
     top: 0;
     left: 100%;
-    background: #EF7F1A;
+
     width: 0.5555rem;
     height: 100%;
     margin-left: -1px;
@@ -854,16 +854,16 @@ textarea.contact-popup__field__input {
 
 .screen1__line-2 {
     position: absolute;
-    top: 14.8518rem;
-    left: 39.037rem;
+    top: 18.3518rem;
+    left: 34.037rem;
     width: 26.1111rem;
     height: 30.9261rem;
 }
 
 .screen1__subtitle {
     position: absolute;
-    top: 26.1111rem;
-    left: 41.7777rem;
+    top: 33.1111rem;
+    left: 40.7777rem;
     margin: 0 0;
     font-size: 1.4814rem;
     line-height: 1.2;
