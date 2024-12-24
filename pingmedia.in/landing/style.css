@@ -908,7 +908,7 @@ textarea.contact-popup__field__input {
 }
 
 .vision-background{
-    width: 50rem;
+    width: 55rem;
 }
 
 .screen2__title {
@@ -919,12 +919,23 @@ textarea.contact-popup__field__input {
     font-weight: 700;
 }
 
+.screen2__title span{
+    font-size:3rem;
+    font-weight: 900;
+}
+
+.screen2__title {
+    font-size: 1.8500rem;
+}
+
+
 .screen2__description {
     display: block;
     line-height: 1.185;
     letter-spacing: 0;
     font-weight: 400;
     text-align: justify;
+    
 }
 
 .screen2__description strong {
@@ -941,22 +952,24 @@ textarea.contact-popup__field__input {
 
 .screen2__text-1 {
     position: absolute;
-    top: 7.7777rem;
+    top: 3.7777rem;
     left: 28.5925rem;
 }
 
+
+
 .screen2__text-2 {
     position: absolute;
-    top: 14.2962rem;
+    top: 10.2962rem;
     left: 28.5925rem;
     width: 23.6296rem;
 }
 
 .screen2__line-2 {
     position: absolute;
-    top: 2.5185rem;
-    left: 16.9259rem;
-    width: 10.5925rem;
+    top: -2rem;
+    left: 20.9259rem;
+    width: 8.5925rem;
     height: 22.4687rem;
 }
 
@@ -3434,10 +3447,7 @@ textarea.contact-popup__field__input {
         padding-bottom: 461.0714%;
     }
 
-    .screen2__title {
-        font-size: 2.0833rem;
-    }
-
+   
     .screen2__mobile-line-1 {
         position: absolute;
         top: 0;
